@@ -1,14 +1,15 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Auth from './pages/auth/Auth'
+import Lobby from './pages/Lobby.jsx'
+import Room from './pages/Room.jsx'
+
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/signin" element={<Auth type="signin" />} />
-        <Route path="/login" element={<Auth type="login" />} />
-
-      </Routes>
+    <Routes>
+      <Route path='/' element={<Lobby />} />
+      <Route path='/room/:roomId' element={<Room/>} />
+    </Routes>
     </>
   )
 }
